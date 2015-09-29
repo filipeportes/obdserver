@@ -1,0 +1,35 @@
+<head>
+    <title>OBD - Server</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/default.css" rel="stylesheet" type="text/css">
+</head>
+
+<template name="layout">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div style="float: left;margin-top: 7px;margin-right: 5px;">
+                    <img src="/img/car.png" style="max-height:50px;">
+                </div>
+                <a class="navbar-brand">
+                    OBD Server
+                </a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar-main" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {{> loginButtons}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 80px;">
+        {{>Template.dynamic template=content}}
+    </div>
+</template>

@@ -1,0 +1,36 @@
+<template name="home">
+
+    <div class="row">
+        <div class="col-lg-6">
+            {{> speed}}
+        </div>
+        <div class="col-lg-6">
+            {{> rpm}}
+        </div>
+    </div>
+
+    <div class="well" style="height: 300px; overflow: auto; width: 100%;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Velocidade</th>
+                    <th>RPM</th>
+                    <th>Temperatura</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each readings}}
+                    {{> reading}}
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>
+
+<template name="reading">
+    <tr>
+        <td>{{readings.SPEED}}</td>
+        <td>{{readings.ENGINE_RPM}}</td>
+        <td>{{readings.ENGINE_COOLANT_TEMP}}</td>
+    </tr>
+</template>
